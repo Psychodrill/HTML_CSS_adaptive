@@ -20,6 +20,9 @@ img{
     flex-wrap: wrap;
 
 }
+.header_button_mobile{
+    display: none;
+}
 .main_view{
     display: flex;
     padding-top: 22px;
@@ -31,9 +34,7 @@ img{
     gap: 32px;
     background-color: #f0bac1;
 }
-.main_picture{
 
-}
 .main_textblock{
     display: flex;
     padding-top: 22px;
@@ -86,8 +87,8 @@ img{
 }
 .center{
 
-    padding-left:calc(50% - 250px);
-    padding-right:calc(50% - 250px);
+    padding-left:calc(50% - 1000px);
+    padding-right:calc(50% - 1000px); 
 }
 .header_logo{
     display: flex; 
@@ -109,30 +110,83 @@ img{
     width:360px;
     height:260px;
     position:relative;
-    background: rgba(18, 12, 12, 0.7);
+
 }
 .category_item:hover{
-    /* opacity:1; */
-     background-color: white; 
-     transition:background-color 0.5s;
+     .shade_category{
+        opacity: 0; 
+        transition:opacity 0.5s;
+     }
 }
-
-
-.accesories{
-    position:relative;
-    background: rgba(18, 12, 12, 0.7);
-}
-
-.describe{
-    width: 500px;
+.problem_image{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
     align-content: center;
     justify-content: center;
+    padding-bottom: 20;
+    width:100%;
+}
+.news{
+    color: #FFF;
+    text-align: center;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    top: 40%; 
+    /* z-index: 5; */
+    width:100%;
+    text-align: center;
+}
+
+.category_name{
+    color: #F16D7F;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 50%; 
+    /* z-index: 5; */
+    width:100%;
+    text-align: center;
+}
+
+/* .category_picture{
+
+}  */
+.shade_category{
+    position:absolute; 
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 12, 12, 0.7);
+}
+
+.accesories{
+    position:relative;
+
+}
+.accesories:hover{
+    .shade_category{
+        opacity: 0; 
+        transition:opacity 0.5s;
+     }
+}
+
+.describe{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-content: center;
     padding-top: 50px;
     padding-bottom: 50px;
+    align-items: center;
 }
 .featured{
     color: #222;
@@ -174,7 +228,7 @@ img{
 .shopping{
     display:flex;
     position:absolute;
-   width: 100%;
+    width: 100%;
     height:100%;
     opacity:0;
     flex-direction: row;
@@ -183,9 +237,7 @@ img{
     justify-content: center;
     color:white;
 }
-/* .shopping:hover{
-    opacity:1;
-} */
+
 .shade{
     width: 100%;
     height:0%; 
@@ -243,55 +295,6 @@ img{
     padding-left: 16;
     padding-top: 16;
 }
-.problem_image{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    padding-bottom: 20;
-    width:100%;
-}
-.news{
-    color: #FFF;
-    text-align: center;
-    font-family: Lato;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    position: absolute;
-    top: 40%; 
-    z-index: 5;
-    width:100%;
-    text-align: center;
-}
-.news:hover{
-    z-index:1;
-    transition:z-index  0.5s;
-}
-
-.category_name{
-    color: #F16D7F;
-    font-family: Lato;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    position: absolute;
-    top: 50%; 
-    z-index: 5;
-    width:100%;
-    text-align: center;
-}
-
- .category_picture{
-    opacity:0.5;
-} 
-.category_picture:hover{
-     opacity:1;
-     transition:opacity 0.5s;
-} 
 
 .footer{
     padding-top: 50px;
@@ -371,3 +374,52 @@ img{
     }
 
 }
+@media(max-width:720px){
+
+    .header_button{
+        display:none;
+    }
+    .header_button_mobile{
+        display:block;
+    }
+    .center-header{
+
+        padding-left:calc(50% - 250px);
+        padding-right:calc(50% - 250px);
+    }
+
+}
+@media(max-width:540px){
+
+    .center-header{
+
+        padding-left:calc(50% - 150px);
+        padding-right:calc(50% - 150px);
+    }
+    .main_picture{
+        display: none;
+    }
+    .main_textblock{
+        padding-top: 100px;
+        padding-bottom: 100px;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+    }
+    .text1{
+        font-size: 38px;
+    }
+    .text2{
+        font-size: 20px;
+    }
+    .accesories{
+        width: 240px;
+        height: 100px;
+    }
+    .category_picture_a{
+        width: 240px;
+        height: 100px;
+    }
+
+}
+
